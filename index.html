@@ -130,7 +130,6 @@
     </div>
   </div>
 </section>
-
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -161,40 +160,36 @@
           The retrieved audio is dynamically modulated, with amplitude scaled by collision force, pitch shifted according to object size, and duration adjusted for continuous contacts.
         </p>
 
-        <!-- 3x3 视频网格 -->
+        <!-- 3x3 视频网格 - 改为和 audioVLA.mp4 一样的简单播放方式 -->
         <div class="video-section">
-          <div class="sound-toggle has-text-centered" style="margin: 0.5rem 0 1rem;">
-            <button id="enable-sound" class="button is-primary is-small">🔊 开启声音</button>
-          </div>
-
           <div class="video-grid">
-            <!-- 修正：文件名拼写 simualtion1 -> simulation1 -->
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simualtion1.mp4" type="video/mp4">
+            <!-- 使用简单的 video 标签，去掉复杂的声音控制 -->
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simualtion1.MP4" type="video/mp4">
             </video>
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simulation2.mp4" type="video/mp4">
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simulation2.MP4" type="video/mp4">
             </video>
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simulation3.mp4" type="video/mp4">
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simulation3.MP4" type="video/mp4">
             </video>
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simulation4.mp4" type="video/mp4">
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simulation4.MP4" type="video/mp4">
             </video>
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simulation5.mp4" type="video/mp4">
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simulation5.MP4" type="video/mp4">
             </video>
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simulation6.mp4" type="video/mp4">
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simulation6.MP4" type="video/mp4">
             </video>
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simulation7.mp4" type="video/mp4">
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simulation7.MP4" type="video/mp4">
             </video>
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simulation8.mp4" type="video/mp4">
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simulation8.MP4" type="video/mp4">
             </video>
-            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
-              <source src="static/audioVLA_videos/simulation9.mp4" type="video/mp4">
+            <video class="grid-video" autoplay muted loop playsinline>
+              <source src="static/audioVLA_videos/simulation9.MP4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -223,42 +218,7 @@
       }
     </style>
 
-    <script>
-      // 受浏览器策略限制：带声音的自动播放需要用户交互
-      (function () {
-        const videos = Array.from(document.querySelectorAll('.grid-video'));
-        const btn = document.getElementById('enable-sound');
-        let soundEnabled = false;
-
-        async function enableSoundForAll() {
-          if (soundEnabled) return;
-          soundEnabled = true;
-          if (btn) btn.classList.add('is-loading');
-          await Promise.all(videos.map(async v => {
-            try {
-              v.muted = false;
-              if (v.paused) await v.play();
-            } catch (e) {
-              console.warn('Play with sound failed for a video:', e);
-            }
-          }));
-          if (btn) {
-            btn.classList.remove('is-loading');
-            btn.classList.add('is-success');
-            btn.textContent = '✅ 已开启声音';
-            btn.disabled = true;
-          }
-          window.removeEventListener('pointerdown', onFirstInteraction, { capture: true });
-        }
-
-        function onFirstInteraction() { enableSoundForAll(); }
-
-        btn?.addEventListener('click', enableSoundForAll);
-        window.addEventListener('pointerdown', onFirstInteraction, { capture: true, once: true });
-      })();
-    </script>
-
-    <!-- 你的 Simulation 实验简述 + 网格（已在上一轮整理，这里可保持不变） -->
+    <!-- 你的 Simulation 实验简述 + 网格 -->
     <h3 class="title is-4">Simulation Experiments Results</h3>
     <p>
       In standard settings, Audio-VLA achieves the highest success rates on LIBERO and RLBench, surpassing all baselines.
@@ -276,14 +236,15 @@
       <div class="sim-row">
         <div class="sim-row-title">Standard Environment</div>
         <div class="sim-grid">
-          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
-            <source src="static/audioVLA_videos/simulation_result1.mp4" type="video/mp4">
+          <!-- 改为简单播放方式 -->
+          <video class="sim-video" autoplay muted loop playsinline>
+            <source src="static/audioVLA_videos/simulation_result1.MP4" type="video/mp4">
           </video>
-          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
-            <source src="static/audioVLA_videos/simulation_result2.mp4" type="video/mp4">
+          <video class="sim-video" autoplay muted loop playsinline>
+            <source src="static/audioVLA_videos/simulation_result2.MP4" type="video/mp4">
           </video>
-          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
-            <source src="static/audioVLA_videos/simulation_result3.mp4" type="video/mp4">
+          <video class="sim-video" autoplay muted loop playsinline>
+            <source src="static/audioVLA_videos/simulation_result3.MP4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -291,14 +252,15 @@
       <div class="sim-row" style="margin-top: 16px;">
         <div class="sim-row-title">Domain shift</div>
         <div class="sim-grid">
-          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
-            <source src="static/audioVLA_videos/simulation_result4.mp4" type="video/mp4">
+          <!-- 改为简单播放方式 -->
+          <video class="sim-video" autoplay muted loop playsinline>
+            <source src="static/audioVLA_videos/simulation_result4.MP4" type="video/mp4">
           </video>
-          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
-            <source src="static/audioVLA_videos/simulation_result5.mp4" type="video/mp4">
+          <video class="sim-video" autoplay muted loop playsinline>
+            <source src="static/audioVLA_videos/simulation_result5.MP4" type="video/mp4">
           </video>
-          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
-            <source src="static/audioVLA_videos/simulation_result6.mp4" type="video/mp4">
+          <video class="sim-video" autoplay muted loop playsinline>
+            <source src="static/audioVLA_videos/simulation_result6.MP4" type="video/mp4">
           </video>
         </div>
       </div>
