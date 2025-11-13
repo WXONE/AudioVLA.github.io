@@ -1,6 +1,6 @@
-# FIND: Fine-tuning Initial Noise Distribution with Policy Optimization for Diffusion Models
+# Audio-VLA: Adding Contact Audio Perception to Vision-Language-Action Model for Robotic Manipulation
 
-This is the repository that contains source code for the [FIND website](https://vpx-ecnu.github.io/FIND-website/).
+This is the repository that contains source code for the AudioVLA
 
 <!-- If you find ClothPPO useful for your work please cite:
 ```
