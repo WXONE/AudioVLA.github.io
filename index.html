@@ -3,35 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="FIND: Fine-tuning Initial Noise Distribution with Policy Optimization for Diffusion Models">
-  <meta name="keywords" content="Multimodal Generation, Diffusion Model, Controllable Generation">
+        content="Audio-VLA: Adding Contact Audio Perception to Vision-Language-Action Model for Robotic Manipulation">
+  <meta name="keywords" content="Vision-Language-Action Model, Robotic Manipulation, Audio Feedback">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="X1yXHaIgYwRqh2RBW2otNG1EeYV1Z-5UJGtTJ8rH7aI" />
-  <title>FIND: Fine-tuning Initial Noise Distribution with Policy Optimization for Diffusion Models</title>
+  <title>Audio-VLA: Adding Contact Audio Perception to Vision-Language-Action Model for Robotic Manipulation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.png">
 
@@ -43,70 +35,25 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">FIND: Fine-tuning Initial Noise Distribution with Policy Optimization for Diffusion Models</h1>
+          <!-- 修正：把 h1 文本改回真正标题 -->
+          <h1 class="title is-1 publication-title">
+            Audio-VLA: Adding Contact Audio Perception to Vision-Language-Action Model for Robotic Manipulation
+          </h1>
+
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://github.com/Fradino">Changgu Chen</a>,</span>
-            <span class="author-block">
-              <a href="https://github.com/ElcarimQAQ">Libing Yang</a>,</span>
-            <span class="author-block">
-              <a href="https://minisal.github.io/photorama/about">Xiaoyan Yang</a>,</span>
-            <span class="author-block">
-              <a href="https://github.com/clgx00">Lianggangxu Chen</a>,</span>
-            <span class="author-block">
-              <a href="https://faculty.ecnu.edu.cn/_s16/hgq2/main.psp">Gaoqi He</a>,</span>
-            <span class="author-block">
-              <a href="https://faculty.ecnu.edu.cn/_s16/wzb/main.psp">Changbo Wang</a>,</span>
-            <span class="author-block">
-              <a href="http://ihpdep.github.io/">Yang Li</a></span>
-            
-            </span>
+            <span class="author-block"><a href="https://github.com/WXONE">Xiangyi Wei</a>,</span>
+            <span class="author-block"><a href="https://github.com/5048429">Haotian Zhang</a>,</span>
+            <span class="author-block"><a href="https://github.com/ppplusss">Xinyi Cao</a>,</span>
+            <span class="author-block"><a href="https://github.com/python-No2">Siyu Xie</a>,</span>
+            <span class="author-block"><a href="https://iipl.fudan.edu.cn/70/e2/c45863a684258/page.htm">Weifeng Ge</a>,</span>
+            <span class="author-block"><a href="http://ihpdep.github.io/">Yang Li</a>,</span>
+            <span class="author-block"><a href="https://faculty.ecnu.edu.cn/_s16/wzb/main.psp">Changbo Wang</a></span>
+            <!-- 修正：删除这里原本多余的 </span> -->
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -114,62 +61,34 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">ACMMM 2024</span>
+            <span class="author-block">Reviewing</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2407.19453"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
+                <a href="https://arxiv.org/user/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
+
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2407.19453"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
+                <a href="https://arxiv.org/user/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
+
               <span class="link-block">
-                <a href="https://github.com/vpx-ecnu/FIND"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
+                <a href="https://github.com/WXONE/AudioVLA.github.io" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
-                  </a>
+                </a>
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
+            </div>
           </div>
 
-          </div>
         </div>
       </div>
     </div>
@@ -179,214 +98,360 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img id="teaser" src="static/find_imgs/fig1_page-0001.jpg" alt="Description of image">
+      <video id="teaser" src="static/audioVLA_imgs/audioVLA.mp4" autoplay muted loop playsinline></video>
     </div>
   </div>
   <script>
     var video = document.getElementById('teaser');
-    video.playbackRate = 2.5; // 设置视频播放速度为2倍
-</script>
+    video.playbackRate = 1;
+  </script>
 </section>
-
-
-
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In recent years, large-scale pre-trained diffusion models have demonstrated their outstanding capabilities in image and video generation tasks. 
-  However, existing models tend to produce visual objects commonly found in the training dataset, which diverges from user input prompts.
-  The underlying reason behind the inaccurate generated results lies in the model's difficulty in sampling from specific intervals of the initial noise distribution corresponding to the prompt.
-  Moreover, it is challenging to directly optimize the initial distribution, given that the diffusion process involves multiple denoising steps.
-  In this paper, we introduce a Fine-tuning Initial Noise Distribution (FIND) framework with policy optimization, which unleashes the powerful potential of pre-trained diffusion networks by directly optimizing the initial distribution to align the generated contents with user-input prompts.  
-  To this end, we first reformulate the diffusion denoising procedure as a one-step Markov decision process and employ policy optimization to directly optimize the initial distribution. 
-  In addition, a dynamic reward calibration module is proposed to ensure training stability during optimization.
-  Furthermore, we introduce a ratio clipping algorithm to utilize historical data for network training and prevent the optimized distribution from deviating too far from the original policy to restrain excessive optimization magnitudes. 
-  Extensive experiments demonstrate the effectiveness of our method in both text-to-image and text-to-video tasks, surpassing SOTA methods in achieving consistency between prompts and the generated content. Our method achieves 10 times faster than the SOTA approach.
+            The Vision-Language-Action models (VLA) have achieved significant advances in robotic manipulation recently.
+            However, vision-only VLA models create fundamental limitations, particularly in perceiving interactive and manipulation dynamic processes.
+            This paper proposes Audio-VLA, a multimodal manipulation policy that leverages contact audio to perceive contact events and dynamic process feedback.
+            Audio-VLA overcomes the vision-only constraints of VLA models. Additionally, this paper introduces the Task Completion Rate (TCR) metric to systematically evaluate dynamic operational processes.
+            Audio-VLA employs pre-trained DINOv2 and SigLIP as visual encoders, AudioCLIP as the audio encoder, and Llama2 as the large language model backbone.
+            We apply LoRA fine-tuning to these pre-trained modules to achieve robust cross-modal understanding of both visual and acoustic inputs.
+            A multimodal projection layer aligns features from different modalities into the same feature space.
+            Moreover RLBench and LIBERO simulation environments are enhanced by adding collision-based audio generation to provide realistic sound feedback during object interactions.
+            Since current robotic manipulation evaluations focus on final outcomes rather than providing systematic assessment of dynamic operational processes, the proposed TCR metric measures how well robots perceive dynamic processes during manipulation, creating a more comprehensive evaluation metric.
+            Extensive experiments on LIBERO, RLBench, and two real-world tasks demonstrate Audio-VLA's superior performance over vision-only comparative methods, while the TCR metric effectively quantifies dynamic process perception capabilities.
           </p>
         </div>
       </div>
     </div>
-   
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
+    </div>
 
-      
-      </div>
-      
-<!-- Overview. -->
+    <!-- Overview -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Overview</h2>
-
         <div class="content has-text-justified">
-          <img src="static/find_imgs/fig2_page-0001.jpg" alt="Overview" />
-          <!-- <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>. -->
-          </p>
+          <img src="static/audioVLA_imgs/figure2_01.jpg" alt="Overview" />
         </div>
       </div>
     </div>
 
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Experiments</h2>
-        <h3 class="title is-4">Quality comparation with SOTA methods</h3>
-        To verify the effectiveness of our method, we conduct both qual-
-itative and quantitative experiments. We compare the proposed
-method with the standard Stable Diffusion v1.5 . Additionally,
-we also compare our approach with state-of-the-art approaches
-DPOK that optimize the entire U-Net using Reinforcement
-Learning to highlight the efficiency and effectiveness of optimizing
-the initial noise. Following the similar setting from DPOK, we
-select four prompts, A green dog is running on the grass, A dog and a
-cat, Four pandas, A dog on the moon, for fair comparison.
-
-        <img src="static/find_imgs/fig4_page-0001.jpg" alt="Simulation Experiments" >
-        </p>
-        <h3 class="title is-4">Ablation Study</h3>
-        We conduct ablation studies by utilizing two complex prompts:
-A red book and a yellow vase. and oil portrait of Batman holding
-a picture of Spiderman, intricate, elegant, highly detailed, lighting,
-painting, art station, smooth, illustration, art by Greg Rutkowski and
-Alphonse Mucha. We generate 100 samples for each scenario to
-serve as our test dataset.
-        <img src="static/find_imgs/fig5_page-0001.jpg" alt="Simulation Experiments" >
-        </p>
-        <br/>
-  
-
-      <h3 class="title is-4">Generalize to Video Diffusions</h3>
-      <div class="content has-text-justified">
+        <h2 class="title is-3">Audio-Enhanced Simulation Environments</h2>
         <p>
-          Our approach is theoretically applicable to any diffusion-based
-method, whether it be text-to-image, text-to-video, text-to-3D, and
-so forth. To demonstrate the versatility of our method, we use
-text-to-video as a case study, analyzing its performance both qual-
-itatively and quantitatively. Specifically, we employ ModelScope
- as our baseline model, which is a large-scale text-to-video dif-
-fusion model trained on large-scale datasets. ViCLIP 
-is a pre-trained model used to evaluate the similarity between text
-and video, which is utilized as our reward function. To verify the effectiveness of our method, we
-selected four sets of prompts that the baseline models struggle
-to generate directly: A green dog is running on the grass., A dog
-is running on the moon., A panda is walking on the grass, from
-left to right. and A monkey is playing guitar. These cover unusual
-colors, displacement control, anomalous positions, and abnormal
-behaviors.
+          To train and evaluate our proposed Audio-VLA, we augment LIBERO and RLBench simulation environments with realistic acoustic feedback via integrating real-world audio recordings triggered through physics-based collision detection.
+          Our approach systematically collects contact sounds from physical manipulation, for each simulated task, we identify target objects by material properties and dimensions, then perform equivalent manipulations on similar real-world objects while recording contact audio at 48kHz using gripper-mounted microphones.
+          These recordings are organized into a structured library indexed by material pairs, interaction types, and force magnitudes.
+          The collected audio recordings are organized into a structured library indexed by material pairs, interaction types, and force magnitudes.
+          During simulation, two types of collision events are monitored, including direct gripper–object contacts and interactions between grasped objects and the environment.
+          When a collision is detected, the participants, impact velocity, and force magnitude are identified.
+          The identified collision parameters are then used to query the audio library and retrieve appropriate sound samples.
+          The retrieved audio is dynamically modulated, with amplitude scaled by collision force, pitch shifted according to object size, and duration adjusted for continuous contacts.
         </p>
-        <!-- <h3 class="title is-5">Pants</h3> -->
-          <div class="row">
-            <div class="column">
-              <img src="static/find_videos/green_dog_ori.gif" alt="描述性文本">
-            </div>
-            <div class="column">
-              <img src="static/find_videos/moon_dog_ori.gif" alt="描述性文本">
-            </div>
-            <div class="column">
-              <img src="static/find_videos/panda_ori.gif" alt="描述性文本">
-            </div>
-            <div class="column">
-              <img src="static/find_videos/monkey_ori.gif" alt="描述性文本">
-            </div>
-          </div> 
 
+        <!-- 3x3 视频网格 -->
+        <div class="video-section">
+          <div class="sound-toggle has-text-centered" style="margin: 0.5rem 0 1rem;">
+            <button id="enable-sound" class="button is-primary is-small">🔊 开启声音</button>
+          </div>
 
+          <div class="video-grid">
+            <!-- 修正：文件名拼写 simualtion1 -> simulation1 -->
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simualtion1.MP4" type="video/mp4">
+            </video>
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simulation2.MP4" type="video/mp4">
+            </video>
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simulation3.MP4" type="video/mp4">
+            </video>
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simulation4.MP4" type="video/mp4">
+            </video>
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simulation5.MP4" type="video/mp4">
+            </video>
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simulation6.MP4" type="video/mp4">
+            </video>
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simulation7.MP4" type="video/mp4">
+            </video>
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simulation8.MP4" type="video/mp4">
+            </video>
+            <video class="grid-video" autoplay muted loop playsinline preload="metadata">
+              <source src="static/audioVLA_videos/simulation9.MP4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <h3 class="title is-5"></h3>
-          <div class="row">
-          <div class="column">
-            <img src="static/find_videos/green_ours.gif" alt="描述性文本">
-            <p>A green dog is running on the grass</p>
-          </div>
-          <div class="column">
-            <img src="static/find_videos/moon_ours.gif" alt="描述性文本">
-            <p>A dog is running on the moon</p>
-          </div>
-          <div class="column">
-            <img src="static/find_videos/panda_ours.gif" alt="描述性文本">
-            <p>A panda is walking on the grass, from left to right</p>
-          </div>
-          <div class="column">
-            <img src="static/find_videos/monkey_ours.gif" alt="描述性文本">
-            <p>A monkey is playing guitar</p>
-          </div>
-          </div> 
+    <style>
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .grid-video {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+      }
+      @media (max-width: 1024px) {
+        .video-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 640px) {
+        .video-grid { grid-template-columns: 1fr; }
+      }
+    </style>
 
-        
-        
+    <script>
+      // 受浏览器策略限制：带声音的自动播放需要用户交互
+      (function () {
+        const videos = Array.from(document.querySelectorAll('.grid-video'));
+        const btn = document.getElementById('enable-sound');
+        let soundEnabled = false;
+
+        async function enableSoundForAll() {
+          if (soundEnabled) return;
+          soundEnabled = true;
+          if (btn) btn.classList.add('is-loading');
+          await Promise.all(videos.map(async v => {
+            try {
+              v.muted = false;
+              if (v.paused) await v.play();
+            } catch (e) {
+              console.warn('Play with sound failed for a video:', e);
+            }
+          }));
+          if (btn) {
+            btn.classList.remove('is-loading');
+            btn.classList.add('is-success');
+            btn.textContent = '✅ 已开启声音';
+            btn.disabled = true;
+          }
+          window.removeEventListener('pointerdown', onFirstInteraction, { capture: true });
+        }
+
+        function onFirstInteraction() { enableSoundForAll(); }
+
+        btn?.addEventListener('click', enableSoundForAll);
+        window.addEventListener('pointerdown', onFirstInteraction, { capture: true, once: true });
+      })();
+    </script>
+
+    <!-- 你的 Simulation 实验简述 + 网格（已在上一轮整理，这里可保持不变） -->
+    <h3 class="title is-4">Simulation Experiments Results</h3>
+    <p>
+      In standard settings, Audio-VLA achieves the highest success rates on LIBERO and RLBench, surpassing all baselines.
+      The integration of acoustic perception effectively complements visual input, allowing precise recognition of contact events and improving decision-making in long-horizon and contact-intensive tasks.
+      When lighting, color, and texture vary, Audio-VLA maintains stable performance with minimal degradation compared to vision-only models.
+      Its use of domain-invariant acoustic cues enables consistent contact perception and task execution even under visual disturbances.
+    </p>
+
+    <div style="text-align:center; margin-top: 8px;">
+      <img src="static/audioVLA_imgs/simulation_result.png" alt="Simulation Experiments" style="max-width:100%; height:auto; display:inline-block;" loading="lazy">
+    </div>
+    <br/>
+
+    <div class="sim-result-block">
+      <div class="sim-row">
+        <div class="sim-row-title">Standard Environment</div>
+        <div class="sim-grid">
+          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/audioVLA_videos/simulation_result1.MP4" type="video/mp4">
+          </video>
+          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/audioVLA_videos/simulation_result2.MP4" type="video/mp4">
+          </video>
+          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/audioVLA_videos/simulation_result3.MP4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="sim-row" style="margin-top: 16px;">
+        <div class="sim-row-title">Domain shift</div>
+        <div class="sim-grid">
+          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/audioVLA_videos/simulation_result4.MP4" type="video/mp4">
+          </video>
+          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/audioVLA_videos/simulation_result5.MP4" type="video/mp4">
+          </video>
+          <video class="sim-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/audioVLA_videos/simulation_result6.MP4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .sim-result-block { margin-top: 12px; }
+      .sim-row-title {
+        text-align: center;
+        font-weight: 600;
+        margin: 8px 0 10px;
+      }
+      .sim-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .sim-video {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+      }
+      @media (max-width: 1024px) {
+        .sim-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 640px) {
+        .sim-grid { grid-template-columns: 1fr; }
+      }
+    </style>
 
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <h3 class="title is-4">Real-world Experiments Results</h3>
+    <p>
+      Under seen conditions, Audio-VLA achieves up to threefold higher success and completion rates than vision-only baselines on EAWM and S5GO.
+      By capturing acoustic cues of friction and depth-weight dynamics, it effectively handles contact-dependent transitions that visual models fail to perceive.
+      When visual appearances change, Audio-VLA maintains stable task performance while vision-only methods collapse.
+      The domain-invariant nature of contact audio preserves physical interaction cues, enabling consistent understanding and generalization across unseen environments.
+    </p>
+
+    <div style="text-align:center; margin-top: 8px;">
+      <img src="static/audioVLA_imgs/real_result.png" alt="real-world Experiments" style="max-width:100%; height:auto; display:inline-block;">
+    </div>
+
+    <!-- 四行三列视频（见/未见环境 + 列标题） -->
+    <div class="real-result-block" style="margin-top:14px;">
+      <div class="col-headers" style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:6px;">
+        <div style="text-align:center; font-weight:600; font-size:0.95rem;">Audio-VLA (Ours)</div>
+        <div style="text-align:center; font-weight:600; font-size:0.95rem;">OpenVLA-OFT</div>
+        <div style="text-align:center; font-weight:600; font-size:0.95rem;">π0</div>
+      </div>
+
+      <div class="row-title" style="text-align:center; font-weight:600; margin:8px 0 10px;">seen environment</div>
+
+      <div class="video-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld1.mp4" type="video/mp4">
+        </video>
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld2.mp4" type="video/mp4">
+        </video>
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld3.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="video-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px;">
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld4.mp4" type="video/mp4">
+        </video>
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld5.mp4" type="video/mp4">
+        </video>
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld6.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="row-title" style="text-align:center; font-weight:600; margin:16px 0 10px;">unseen environment</div>
+
+      <div class="video-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld7.mp4" type="video/mp4">
+        </video>
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld8.mp4" type="video/mp4">
+        </video>
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld9.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="video-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px;">
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld10.mp4" type="video/mp4">
+        </video>
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld11.mp4" type="video/mp4">
+        </video>
+        <video class="rw-video" autoplay muted loop playsinline preload="metadata" style="width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px;">
+          <source src="static/audioVLA_videos/realworld12.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{chen2024find,
-      title={FIND: Fine-tuning Initial Noise Distribution with Policy Optimization for Diffusion Models},
-      author={Chen, Changgu and Yang, Libing and Yang, Xiaoyan and Chen, Lianggangxu and He, Gaoqi and Wang, Changbo and Li, Yang},
-      booktitle={ACM Multimedia 2024}
-    }</code></pre>
+    <pre><code>
+  coming soon
+</code></pre>
   </div>
 </section>
 
-
-<!-- <footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer> -->
-
 </body>
 </html>
+<!-- 放在页面底部，确保视频节点已渲染后执行 -->
+<script>
+  // 1) 统一给所有 <video> 加控件
+  const vids = Array.from(document.querySelectorAll('video'));
+  vids.forEach(v => {
+    v.setAttribute('controls', '');                         // 显示控件
+    v.setAttribute('controlsList', 'nodownload');           // 可选：隐藏下载按钮
+    v.setAttribute('playsinline', '');                      // 移动端内联播放
+    // 自动播放策略：保留静音+自动播
+    v.setAttribute('autoplay', '');
+    v.setAttribute('muted', '');
+    v.setAttribute('loop', '');
+  });
+
+  // 2) 首次用户交互后，尝试统一取消静音（受浏览器策略约束）
+  let soundUnlocked = false;
+  async function unlockSoundOnce() {
+    if (soundUnlocked) return;
+    soundUnlocked = true;
+    for (const v of vids) {
+      try {
+        v.muted = false;               // 取消静音
+        if (v.paused) await v.play();  // 如果被策略暂停，显式播放
+      } catch (e) {
+        // 某些环境仍可能需要用户逐个点按
+        console.warn('Unmute/play failed:', e);
+      }
+    }
+    window.removeEventListener('pointerdown', unlockSoundOnce, {capture:true});
+  }
+  window.addEventListener('pointerdown', unlockSoundOnce, {capture:true, once:true});
+</script>
